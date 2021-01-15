@@ -24,7 +24,8 @@ all : $(NAME)
 $(NAME) : 
 	@nasm $(FLAGS) ft_strlen.s
 	@nasm $(FLAGS) ft_strcpy.s
-	@ar -rc $(NAME) ft_strlen.o
+
+	@ar -rc $(NAME) $(OBG)
 	@ranlib $(NAME)
 	@gcc main.c $(NAME)
 
@@ -33,5 +34,6 @@ clean :
 
 fclean : 
 	rm -rf $(NAME)
+	rm -rf a.out
 
 re : clean all
