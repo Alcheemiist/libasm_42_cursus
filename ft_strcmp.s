@@ -1,4 +1,3 @@
-
 segment .text
 	global _ft_strcmp
 

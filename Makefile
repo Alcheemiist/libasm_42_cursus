@@ -29,9 +29,8 @@ $(NAME) :
 	@nasm $(FLAGS) ft_strlen.s
 	@nasm $(FLAGS) ft_strcpy.s
 	@nasm $(FLAGS) ft_strcmp.s
-	nasm $(FLAGS) ft_strdup.s
-	nasm $(FLAGS) ft_strcpy.s
-	nasm $(FLAGS) ft_read.s
+	@nasm $(FLAGS) ft_strdup.s
+	@nasm $(FLAGS) ft_read.s
 	nasm $(FLAGS) ft_write.s
 	@ar -rc $(NAME) $(OBG)
 	@ranlib $(NAME)
