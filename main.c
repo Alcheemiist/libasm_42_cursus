@@ -44,19 +44,14 @@ int main(int argc, char **argv)
         // printf("fd = %d | (%d) =    read(fd, buff, 10)\n|%s|\n",fd , d, yy);
 
 //6 FT_WRITE
-        int o = ft_write(1, "Mehdi", 5);
+        int o = ft_write(1, NULL, 3);
         printf("\nreturn = |%d| ft_write(1, 'Mehdi', 5) = |^|\n", o);
 
-        o = write(1, "Mehdi", 5);
+        o = write(1, NULL, 3);
         printf("\nreturn = |%d|    write(1, 'Mehdi', 5) = |^|\n", o);
-
 
     }
     else
-    {
         printf("no input\n");
-    }
-    
     return 0;
-
 }
