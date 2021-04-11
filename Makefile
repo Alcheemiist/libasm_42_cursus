@@ -31,10 +31,9 @@ $(NAME) :
 	@nasm $(FLAGS) ft_strcmp.s
 	@nasm $(FLAGS) ft_strdup.s
 	@nasm $(FLAGS) ft_read.s
-	nasm $(FLAGS) ft_write.s
+	@nasm $(FLAGS) ft_write.s
 	@ar -rc $(NAME) $(OBG)
 	@ranlib $(NAME)
-	@gcc main.c $(NAME)
 
 clean : 
 	rm -rf $(OBG)
