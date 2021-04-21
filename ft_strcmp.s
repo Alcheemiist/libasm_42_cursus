@@ -3,7 +3,7 @@ segment .text
 
 _ft_strcmp:
 	mov 	rax, 0		; define rax to 0
-	jmp		loop		; call compa
+	jmp		loop		; call loop
 
 loop:
 	mov		al, BYTE [rdi]	; get the least significant byte in rdi where is stock the value of the char

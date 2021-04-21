@@ -12,14 +12,14 @@ void	test_read(void)
 
 	o = ft_read(0, buff, 5);
 	buff[o] = '\0';
-	o = read(0, buff2, 5);
-	buff2[o] = '\0';
 	printf("ft_read => return = (%d) || buff = |%s|\n", o, buff);
-	printf("   read => return = (%d) || buff = |%s|\n", o, buff2);
+	o = read(0, buff, 5);
+	buff[o] = '\0';
+	printf("   read => return = (%d) || buff = |%s|\n", o, buff);
 	o = ft_write(1, "LLL", 3);
-	printf("\n|^| return = |%d| ft_write()\n\n", o);
+	printf(" <return = |%d| ft_write()\n\n", o);
 	o = write(1, "LLL", 3);
-	printf("\n|^| return = |%d|    write()\n", o);
+	printf(" <return = |%d|    write()\n", o);
 }
 
 void	test_strdup(char *str)

@@ -9,10 +9,10 @@ _ft_write:
     jc      error
     ret
 
-error :
-    push    rax
-    call    ___error
-    pop     r8
-    mov     [rax], r8
-    mov     rax, -1
+error:
+    push	rax             ; save errno 
+    call	___error        ; retrieve address to errno 
+    pop		r8              
+    mov		[rax], r8       ; put errno in return value of __error (pointer to errno)
+    mov		rax, -1
     ret
